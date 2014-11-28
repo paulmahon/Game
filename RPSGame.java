@@ -11,9 +11,13 @@ import java.util.Random;
 
 public class RPSGame{
 	//set data members or varibles (They must be private)
-	private String Rock;
-	private String Paper;
-	private String Scissors;
+	private String Game[] = {"Player Won","Computer Won","Player Lost","Computer Lost"};
+	private int GameStats [][];
+	private int Rock = 1;
+	private int Paper = 2;
+	private int Scissors = 3;
+	//private String Paper;
+	//private String Scissors;
 	private String Player;
 	private String Computer;
 	private int numGames;
@@ -24,9 +28,9 @@ public class RPSGame{
 
 	//constructor (initalise varibles)
 	public RPSGame(){
-		Rock = new String();
-		Paper = new String();
-		Scissors = new String();
+		//Rock = new String();
+		//Paper = new String();
+		//Scissors = new String();
 		Player = new String();
 		Computer = new String();
 		numGames = 0;
