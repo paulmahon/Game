@@ -12,6 +12,8 @@ import java.util.Scanner;
 public class RPSGameApp{
 	public static void main(String arg[]){
 		//declare variables
+		//int numGames = 0;
+
 		//int
 		// string
 
@@ -24,8 +26,12 @@ public class RPSGameApp{
 		sc = new Scanner(System.in);
 		//myGame = new Game();
 
-		//ask for input
-		System.out.println("bla bla");
+		//Ask the user how many games to play;
+		System.out.println("How many games do you want to play?");
+		int numGames = sc.nextInt();
+
+
+
 
 		//take input
 

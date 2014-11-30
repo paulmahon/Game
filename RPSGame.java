@@ -16,33 +16,40 @@ public class RPSGame{
 	private int Rock = 1;
 	private int Paper = 2;
 	private int Scissors = 3;
-	//private String Paper;
-	//private String Scissors;
-	private String Player;
-	private String Computer;
-	private int numGames;
-	//private int numLives;
-	private int roundHistory;
-	private int gameHistory;
+	private String Shapes[] = {"Rock","Paper","Scissors"};
+	private int arrNumGames[];
+	//private String Player;
+	//private String Computer;
+	private int myNumGames;
+	//private int roundHistory;
+	//private int gameHistory;
 	private int lives;
 
 	//constructor (initalise varibles)
 	public RPSGame(){
-		//Rock = new String();
-		//Paper = new String();
-		//Scissors = new String();
-		Player = new String();
-		Computer = new String();
-		numGames = 0;
+
+	//	Player = new String();
+	//	Computer = new String();
+		//numGames = 0;
 	//	numLives = 0;
-		roundHistory = 0;
-		gameHistory = 0;
+	//	roundHistory = 0;
+	//	gameHistory = 0;
 		lives = 3;
+
+
 	}
 
 	//set methods - one for every input
 	Scanner sc = new Scanner(System.in); //to get user input from the keyboard
-    Random generator = new Random(); //to make random choices for the computer
+    Random pcChoice = new Random(); //to make random choices for the computer
+
+    	public void setnumGames(int numGames){
+			this.myNumGames=numGames;
+
+			int arrNumGames[] = new int[myNumGames];
+
+
+	}
 
 	//public void
 		//this.
