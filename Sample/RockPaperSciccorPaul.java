@@ -4,15 +4,21 @@ import java.util.Scanner;
 public class RockPaperSciccorPaul {
 public static void main(String[] args){
 
+   // String Shapes[] = {"Rock","Paper","Scissors"};
     int wins = 0;
     int losses = 0;
+    int pclosses = 0;
+    int games;
     int rnd;
     int lives = 3;
+    int gameStats[][];
+    int userShape[];
+    int pcShape[];
+    userShape = new int[100];
+    pcShape = new int[100];
+    int n = 0;
 
-    System.out.print("*************************************\n*");
-    System.out.println("    Rock, Paper, Scissor, Shoot!   * ");
-    System.out.println("*\t\t\t\t    *");
-    System.out.print("*************************************\n");
+//Ask the the user for input a value fo rthe number of games required
 	Scanner input = new Scanner (System.in);
 
 	System.out.println("How many games do you want to play?");
@@ -20,13 +26,22 @@ public static void main(String[] args){
 
 		int arrnumGames[] = new int[numGames];
 
+		gameStats = new int [n][4];
 
-    // Play's 10 rounds before terminating
-    for(rnd=numGames;rnd>=1;rnd--){
-            //Display's rounds left on the right side
+
+    // Play game while user still has lives left
+    int livesLeft=0;
+    for (int i = 0; i < lives; i--){
+		livesLeft = lives - losses;
+
+
+    for(games=numGames;games>=1;games--){
+            //Display's games left on the right side
         System.out.println("\t\t\t\t\t 1 = Rock\n\t\t\t\t\t 2 = Paper\n\t\t\t\t\t 3 = Scissor");
         System.out.println("\t\t\t\t\t ~~~~~~~~~~~~~~");
-        System.out.println("\t\t\t\t\t|Rounds Left:" + (rnd) + "|");
+        System.out.println("\t\t\t\t\t|Games Left:" + (games) + "|");
+        System.out.println("\t\t\t\t\t|Lives Left:" + (livesLeft) + "|");
+
         System.out.println("\t\t\t\t\t ~~~~~~~~~~~~~~");
 
     Random GAME = new Random();
@@ -42,11 +57,11 @@ public static void main(String[] args){
 
     //If the user enters a value greater then 3 or less than 1 it will terminate the prgm
     //and display an error msg
-    while (USER > 3 || USER < 1) {
-        System.err.println("Incorrect value entered. Restart the Game\nand choose a number 1-3");
-        return;
-        }
-    System.out.println("___________________");
+   // while (USER > 3 || USER < 1) {
+   //     System.err.println("Incorrect value entered. Restart the Game\nand choose a number 1-3");
+   //     return;
+   //     }
+   // System.out.println("___________________");
 
     if(USER == PC){
         if(USER == SCISSOR){
@@ -71,7 +86,7 @@ public static void main(String[] args){
         System.out.println("You Win!");
         wins++;
         System.out.println("|~~~~~~~~~~~~~~~~~~|");
-        System.out.println(" Wins: " + wins + "|Losses: " + losses);
+        System.out.println(" Wins: " + wins + "|Losses: " + pclosses);
         System.out.println("|~~~~~~~~~~~~~~~~~~|");
     }
     //Pc wins
@@ -92,7 +107,7 @@ public static void main(String[] args){
         System.out.println("You Win! ");
         wins++;
         System.out.println("|~~~~~~~~~~~~~~~~~~|");
-        System.out.println(" Wins: " + wins + "|Losses: " + losses);
+        System.out.println(" Wins: " + wins + "|Losses: " + pclosses);
         System.out.println("|~~~~~~~~~~~~~~~~~~|");
     }
     //Pc wins
@@ -113,7 +128,7 @@ public static void main(String[] args){
         System.out.println("You Win!");
         wins++;
         System.out.println("|~~~~~~~~~~~~~~~~~~|");
-        System.out.println(" Wins: " + wins + "|Losses: " + losses);
+        System.out.println(" Wins: " + wins + "|Losses: " + pclosses);
         System.out.println("|~~~~~~~~~~~~~~~~~~|");
     }
     // Pc Wins
@@ -126,10 +141,12 @@ public static void main(String[] args){
         System.out.println(" Wins: " + wins + "|Losses: " + losses);
         System.out.println("|~~~~~~~~~~~~~~~~~~|");
         }
-        if(rnd==1){
+        if(games==1){
         System.out.println("\t\t\t\t\t" +
                 "(Game Over man, Game Over!)");
         }
     }
+}
+
 }
 }
