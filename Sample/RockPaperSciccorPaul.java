@@ -2,21 +2,22 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class RockPaperSciccorPaul {
+	private int wins = 0;
+	private int losses = 0;
+	private    int pclosses = 0;
+	private    int games;
+	private    int rnd;
+	private    int lives = 3;
+	private    int gameStats[][];
+	private    int userShape[];
+	private    int pcShape[];
+	private userShape = new int[100];
+	private    pcShape = new int[100];
+    private int n = 0;
 public static void main(String[] args){
 
    // String Shapes[] = {"Rock","Paper","Scissors"};
-    int wins = 0;
-    int losses = 0;
-    int pclosses = 0;
-    int games;
-    int rnd;
-    int lives = 3;
-    int gameStats[][];
-    int userShape[];
-    int pcShape[];
-    userShape = new int[100];
-    pcShape = new int[100];
-    int n = 0;
+
 
 //Ask the the user for input a value fo rthe number of games required
 	Scanner input = new Scanner (System.in);
@@ -31,7 +32,7 @@ public static void main(String[] args){
 
     // Play game while user still has lives left
     int livesLeft=0;
-    for (int i = 0; i < lives; i--){
+    for (int i = 0; i < lives; i++){
 		livesLeft = lives - losses;
 
 
