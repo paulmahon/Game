@@ -61,75 +61,82 @@ public class RPSGame2014 {
 							}
 
 				System.out.println("Result is a Draw\n");
-				System.out.println("	|~~~~~~~~~~~~~~~~~~|");
-				System.out.println("	|Wins: " + wins + "|Losses: " + losses);
-	        	System.out.println("	|~~~~~~~~~~~~~~~~~~|");
+				//System.out.println("	|~~~~~~~~~~~~~~~~~~|");
+				System.out.println("	|		Wins: " + wins + "|		Losses: " + losses);
+	        	//System.out.println("	|~~~~~~~~~~~~~~~~~~|");
+	        	System.out.println("	|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|");
 	    	}
 
 	    //User wins
 	    if(userShape == SCISSOR)
 	        if(Computer == PAPER){
 	        System.out.println("User: Scissor\nComputer: Paper");
-	        System.out.println("Scissor Cuts Paper");
+	        System.out.println("Scissor beats Paper");
 	        System.out.println("User Wins!");
 	        wins++;
-	        System.out.println("	|~~~~~~~~~~~~~~~~~~|");
-	        System.out.println("	|Wins: " + wins + "|Losses: " + losses);
-	        System.out.println("	|~~~~~~~~~~~~~~~~~~|");
+	        //System.out.println("	|~~~~~~~~~~~~~~~~~~|");
+	        System.out.println("	|		Wins: " + wins + "			Losses: " + losses);
+	       // System.out.println("	|~~~~~~~~~~~~~~~~~~|");
+	        System.out.println("	|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|");
 	    }
 			//Computer wins
 			else if(Computer == ROCK){
 				System.out.println("User: Scissor \nComputer: Rock");
-				System.out.println("Rock Breaks Scissor!");
+				System.out.println("Rock beats Scissor!");
 				System.out.println("Computer Wins!");
 				losses++;
-				System.out.println("	|~~~~~~~~~~~~~~~~~~|");
-				System.out.println(" 	|Wins: " + wins + "|Losses: " + losses);
-				System.out.println("	|~~~~~~~~~~~~~~~~~~|");
+				//System.out.println("	|~~~~~~~~~~~~~~~~~~|");
+				System.out.println(" 	|		Wins: " + wins + "			Losses: " + losses);
+				//System.out.println("	|~~~~~~~~~~~~~~~~~~|");
+				System.out.println("	|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|");
 				livesLeft = livesLeft -1;
 			}
 				//User wins
 				if(userShape == ROCK)
 					if(Computer == SCISSOR ){
 					System.out.println("User: Rock\nComputer: Scissor");
-					System.out.println("Rock Breaks Scissor");
+					System.out.println("Rock beats Scissor");
 					System.out.println("User Wins! ");
 					wins++;
-					System.out.println("	|~~~~~~~~~~~~~~~~~~|");
-					System.out.println(" 	|Wins: " + wins + "|Losses: " + losses);
-					System.out.println("	|~~~~~~~~~~~~~~~~~~|");
+					//System.out.println("	|~~~~~~~~~~~~~~~~~~|");
+					System.out.println(" 	|		Wins: " + wins + "			Losses: " + losses);
+					//System.out.println("	|~~~~~~~~~~~~~~~~~~|");
+					System.out.println("	|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|");
 				}
 					//Computer wins
 					else if (Computer == PAPER){
 						System.out.println("User: Rock\nComputer: Paper");
-						System.out.println("Paper Covers Rock!");
+						System.out.println("Paper beats Rock!");
 						System.out.println("Computer Wins!");
 						losses++;
-						System.out.println("	|~~~~~~~~~~~~~~~~~~|");
-						System.out.println(" 	|Wins: " + wins + "|Losses: " + losses);
-						System.out.println("	|~~~~~~~~~~~~~~~~~~|");
+						//System.out.println("	|~~~~~~~~~~~~~~~~~~|");
+						System.out.println(" 	|		Wins: " + wins + "			Losses: " + losses);
+						//System.out.println("	|~~~~~~~~~~~~~~~~~~|");
+						System.out.println("	|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|");
 						livesLeft = livesLeft -1;
 					}
 						//User Wins
 						if(userShape == PAPER)
 							if(Computer == ROCK){
 							System.out.println("User: Paper\nComputer: Rock");
-							System.out.println("Paper Covers Rock");
+							System.out.println("Paper beats Rock");
 							System.out.println("User Wins!");
 							wins++;
-							System.out.println("	|~~~~~~~~~~~~~~~~~~|");
-							System.out.println(" 	|Wins: " + wins + "|Losses: " + losses);
-							System.out.println("	|~~~~~~~~~~~~~~~~~~|");
+							//System.out.println("	|~~~~~~~~~~~~~~~~~~|");
+							System.out.println(" 	|		Wins: " + wins + "			Losses: " + losses);
+							//System.out.println("	|~~~~~~~~~~~~~~~~~~|");
+							System.out.println("	|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|");
 						}
 						//Computer Wins
 						else if (Computer == SCISSOR){
 							System.out.println("User: Paper\nComputer: Scissor");
-							System.out.println("Scissor Cuts Paper!");
+							System.out.println("Scissor beats Paper!");
 							System.out.println("Computer Wins!");
 							losses++;
-							System.out.println("	|~~~~~~~~~~~~~~~~~~|");
-							System.out.println(" 	|Wins: " + wins + "|Losses: " + losses);
-							System.out.println("	|~~~~~~~~~~~~~~~~~~|");
+							//System.out.println("	|~~~~~~~~~~~~~~~~~~|");
+							System.out.println(" 	|		Wins: " + wins + "			Losses: " + losses);
+							//System.out.println("	|~~~~~~~~~~~~~~~~~~|");
+							System.out.println("	|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|");
 							livesLeft = livesLeft -1;
 							}
 								if(games==0){
@@ -165,7 +172,7 @@ public class RPSGame2014 {
 							//Display Liveleft and decrease the number of games
 
 							System.out.println();
-							System.out.println("Lives Left = " + livesLeft);
+							System.out.println("				 Lives Left = " + livesLeft);
 							games = games - 1;
 
 							//Keep track of al lives until they reach 0 and then stop the program
