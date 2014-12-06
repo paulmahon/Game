@@ -13,7 +13,8 @@ public class RPSGame2014 {
 	private int wins = 0;
 	private int losses = 0;
 	private int games;
-	private int shapeChoices [][];
+	private int userShapeChoices [][];
+	private int computerShapeChoices [][];
 	private int livesLeft = 3;
 	private int userShape = 0;
 	private int ROCK=1;
@@ -23,8 +24,9 @@ public class RPSGame2014 {
 	private Scanner	input = new Scanner (System.in);
 
 		public void RPSGame2014(){
-
-			shapeChoices = new int [games][2]; //create a 2D array where the number of games choosen by the user is the rows and the columns contain choices for User & Computer
+			//create a 2D array where the number of games choosen by the user is the rows and the columns contain shape choices
+			userShapeChoices = new int [games][3];
+			computerShapeChoices = new int [games][3];
 
 
 		}
@@ -37,7 +39,7 @@ public class RPSGame2014 {
 			public void getUserShape(){
 			System.out.println();
 			System.out.println();
-			System.out.println("Please choose the number of you shape:");
+			System.out.println("Please choose the number for your shape:");
 			System.out.println();
 			System.out.println("	Rock 	 = 1");
 			System.out.println("	Paper 	 = 2"				+" 			No. Games Remaining: " + games);
@@ -49,7 +51,7 @@ public class RPSGame2014 {
 
 		public void calculateWinner(){
 
-			//the below code will calculate if the game was a draw
+			//The below code will calculate if the game was a DRAW
 			if(userShape == Computer){
 	       		 	if(userShape == SCISSOR){
 					System.out.println("You Both Played Scissor");
@@ -66,7 +68,7 @@ public class RPSGame2014 {
 	        	System.out.println("	|-----------------------------------------------------------|");
 	    	}
 
-	    //User wins
+	    //This is the code when the USER WINS using SCISSORS
 	    if(userShape == SCISSOR)
 	        if(Computer == PAPER){
 	        System.out.println("User: Scissor\nComputer: Paper");
@@ -76,7 +78,7 @@ public class RPSGame2014 {
 	        System.out.println("	|		Wins: " + wins + "			Losses: " + losses);
 	        System.out.println("	|-----------------------------------------------------------|");
 	    }
-			//Computer wins
+			//This is the code when the COMPUTER WINS using ROCK
 			else if(Computer == ROCK){
 				System.out.println("User: Scissor \nComputer: Rock");
 				System.out.println("Rock beats Scissor!");
@@ -86,7 +88,7 @@ public class RPSGame2014 {
 				System.out.println("	|-----------------------------------------------------------|");
 				livesLeft = livesLeft -1;
 			}
-				//User wins
+				//This is the code when the USER WINS using ROCK
 				if(userShape == ROCK)
 					if(Computer == SCISSOR ){
 					System.out.println("User: Rock\nComputer: Scissor");
@@ -96,7 +98,7 @@ public class RPSGame2014 {
 					System.out.println(" 	|		Wins: " + wins + "			Losses: " + losses);
 					System.out.println("	|-----------------------------------------------------------|");
 				}
-					//Computer wins
+					//This is the code when the COMPUTER WINS using PAPER
 					else if (Computer == PAPER){
 						System.out.println("User: Rock\nComputer: Paper");
 						System.out.println("Paper beats Rock!");
@@ -106,7 +108,7 @@ public class RPSGame2014 {
 						System.out.println("	|-----------------------------------------------------------|");
 						livesLeft = livesLeft -1;
 					}
-						//User Wins
+						//This is the code when the USER WINS using PAPER
 						if(userShape == PAPER)
 							if(Computer == ROCK){
 							System.out.println("User: Paper\nComputer: Rock");
@@ -116,7 +118,7 @@ public class RPSGame2014 {
 							System.out.println(" 	|		Wins: " + wins + "			Losses: " + losses);
 							System.out.println("	|-----------------------------------------------------------|");
 						}
-						//Computer Wins
+						//This is the code when the COMPUTER WINS using SCISSORS
 						else if (Computer == SCISSOR){
 							System.out.println("User: Paper\nComputer: Scissor");
 							System.out.println("Scissor beats Paper!");
@@ -139,8 +141,6 @@ public class RPSGame2014 {
 					captureGames();
 
 						do{
-
-							//while (livesLeft > 0);
 
 							//Get user shape
 							getUserShape();
@@ -177,10 +177,10 @@ public class RPSGame2014 {
 							while (games > 0);
 
 						/*System.out.println();
-						System.out.println("Game Shape Choices: ");
-						for (int i = 0; i < shapeChoices.length; i++){
-							for (int j = 0; j < shapeChoices[i].length; j++){
-								System.out.print(shapeChoices[i][j] + " ");
+						System.out.println("UserShape Choices: ");
+						for (int i = 0; i < userShapeChoices.length; i++){
+							for (int j = 0; j < userShapeChoices[i].length; j++){
+								System.out.print(userShapeChoices[i][j] + " ");
 							}
 						}*/
 
