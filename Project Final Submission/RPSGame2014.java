@@ -17,10 +17,10 @@ public class RPSGame2014 {
 	private int playerShape = 0;
 	private int playerShapeChoices [][];
 	private int computerShapeChoices [][];
-	private int ROCK=1;
-    private int PAPER=2;
-    private int SCISSOR=3;
-    private int Computer;
+	private int rock=1;
+    private int paper=2;
+    private int scissor=3;
+    private int computer;
 	private Scanner	input = new Scanner (System.in);
 
 
@@ -60,14 +60,14 @@ public class RPSGame2014 {
 		public void calculateWinner(){
 
 				//The below code will calculate if the game was a DRAW
-				if(playerShape == Computer){
-						if(playerShape == SCISSOR){
+				if(playerShape == computer){
+						if(playerShape == scissor){
 						System.out.println("You Both Played SCISSORS");
 						}
-							if(playerShape == ROCK){
+							if(playerShape == rock){
 							System.out.println("You Both Played ROCK");
 							}
-								if(playerShape == PAPER){
+								if(playerShape == paper){
 								System.out.println("You Both Played PAPER");
 								}
 
@@ -79,8 +79,8 @@ public class RPSGame2014 {
 				}
 
 				//This is the code when the PLAYER WINS using SCISSORS
-				if(playerShape == SCISSOR)
-					if(Computer == PAPER){
+				if(playerShape == scissor)
+					if(computer == paper){
 					System.out.println("Players shape is  SCISSORS");
 					System.out.println("Computers shape is PAPER");
 					System.out.println();
@@ -93,7 +93,7 @@ public class RPSGame2014 {
 
 				}
 					//This is the code when the COMPUTER WINS using ROCK
-					else if(Computer == ROCK){
+					else if(computer == rock){
 							System.out.println("Players shape is  SCISSORS");
 							System.out.println("Computers shape is ROCK");
 							System.out.println();
@@ -106,8 +106,8 @@ public class RPSGame2014 {
 							livesLeft = livesLeft -1;
 					}
 						//This is the code when the PLAYER WINS using ROCK
-						if(playerShape == ROCK)
-							if(Computer == SCISSOR ){
+						if(playerShape == rock)
+							if(computer == scissor ){
 							System.out.println("Players shape is  ROCK");
 							System.out.println("Computers shape is SCISSORS");
 							System.out.println();
@@ -119,7 +119,7 @@ public class RPSGame2014 {
 							System.out.println("	|-----------------------------------------------------------|");
 						}
 							//This is the code when the COMPUTER WINS using PAPER
-							else if (Computer == PAPER){
+							else if (computer == paper){
 								System.out.println("Players shape is  ROCK");
 								System.out.println("Computers shape is PAPER");
 								System.out.println();
@@ -132,8 +132,8 @@ public class RPSGame2014 {
 								livesLeft = livesLeft -1;
 							}
 								//This is the code when the PLAYER WINS using PAPER
-								if(playerShape == PAPER)
-									if(Computer == ROCK){
+								if(playerShape == paper)
+									if(computer == rock){
 									System.out.println("Players shape is  PAPER");
 									System.out.println("Computers shape is ROCK");
 									System.out.println();
@@ -145,7 +145,7 @@ public class RPSGame2014 {
 									System.out.println("	|-----------------------------------------------------------|");
 								}
 								//This is the code when the COMPUTER WINS using SCISSORS
-								else if (Computer == SCISSOR){
+								else if (computer == scissor){
 									System.out.println("Players shape is  PAPER");
 									System.out.println("Computers shape is SCISSORS");
 									System.out.println();
@@ -177,9 +177,9 @@ public class RPSGame2014 {
 							//Allow the computer to generate a shape choice
 
 							Random computerShape = new Random();
-							Computer = 1+computerShape.nextInt(3);
+							computer = 1+computerShape.nextInt(3);
 							System.out.println();
-							System.out.println("Computers Chooses No.:  " + Computer);
+							System.out.println("Computers Chooses No.:  " + computer);
 							System.out.println();
 
 
